@@ -1,0 +1,23 @@
+@import play.i18n._
+
+@main("Tytuł") {
+
+
+<div ng-controller="MainCtrl">
+
+	<nav class="uk-navbar">
+		<ul class="uk-navbar-nav">
+			<li ng-repeat="tab in tabs" ng-click="onClickTab(tab)">
+				<a>{{ tab.title }}</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<div ng-include="currentTab">
+	</div>
+
+</div>
+
+
+}
