@@ -2,21 +2,21 @@ package model;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-//import com.avaje.ebean.Model;
-
 @Entity
-public class Ingredient {//extends Model {
+public class Ingredient {
 
 	@Id
 	public Long id;
 	
+	@Column(nullable = false)
 	public String name;
 	
-	@OneToMany(mappedBy = "ingredient")
-	public List<RecipeIngredient> recipeIngredients;
+	@OneToMany(mappedBy = "recipeIngredientPk.ingredients")
+	public List<RecipeIngredient> recipes;
 		
 }

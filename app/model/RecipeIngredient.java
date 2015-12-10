@@ -1,36 +1,24 @@
 package model;
 
+import javax.persistence.AssociationOverride;
+import javax.persistence.AssociationOverrides;
+import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-//import com.avaje.ebean.Model;
 
 @Entity
-@Table(name = "recipes_ingredients")
-public class RecipeIngredient {// extends Model {
-
-	/*
-	RecipeIngredient() {
-		primaryKey = new RecipeIngredientPK();
-	}
-	*/
+@AssociationOverrides({
+	@AssociationOverride(name = "recipeIngredientPk.recipes", joinColumns = @JoinColumn(name = "recipe_id")),
+	@AssociationOverride(name = "recipeIngredientPk.ingredients", joinColumns = @JoinColumn(name = "ingredient_id")) 
+})
+public class RecipeIngredient {
 
 	@EmbeddedId
-	private RecipeIngredientPK primaryKey = new RecipeIngredientPK();
+	public RecipeIngredientPk recipeIngredientPk;
 
-	@ManyToOne
-	@JoinColumn(name = "recipe_id", insertable = false, updatable = false)
-	public Recipe recipe;
+	/** Ilość danego składnika **/
+	@Column(name = "ingredient_amount", nullable = false)
+	public String ingredientAmount;
 
-    @ManyToOne
-	@JoinColumn(name = "ingredient_id", insertable = false, updatable = false)
-	public Ingredient ingredient;
-
-	/** Ilość danego składnika (np. "300 g") **/
-	public String amount;
 }
-
-

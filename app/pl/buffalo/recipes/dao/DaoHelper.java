@@ -16,7 +16,7 @@ public class DaoHelper {
 	
 //    @Transactional
 	public static List<Recipe> getAllRecipes() {
-		return JPA.em().createQuery("SELECT * FROM recipea").getResultList();
+		return JPA.em().createQuery("SELECT * FROM recipe").getResultList();
 //		return Recipe.find.all();
 	}
 }
