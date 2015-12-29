@@ -6,12 +6,14 @@ import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.Table;
 
 @Entity
 @AssociationOverrides({
 	@AssociationOverride(name = "recipeIngredientPk.recipes", joinColumns = @JoinColumn(name = "recipe_id")),
 	@AssociationOverride(name = "recipeIngredientPk.ingredients", joinColumns = @JoinColumn(name = "ingredient_id")) 
 })
+@Table(name="recipe_ingredient")
 public class RecipeIngredient {
 
 	@EmbeddedId

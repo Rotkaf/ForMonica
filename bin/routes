@@ -11,6 +11,8 @@ GET     /listRecipes                controllers.Application.listRecipes
 
 GET     /searchByIngredients        controllers.Application.searchByIngredients
 
+GET     /mealTypes                  controllers.Application.getMealTypes
+
 #POST    /submit                     controllers.Application.submit()
 
 

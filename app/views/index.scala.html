@@ -5,13 +5,11 @@
 
 <div ng-controller="MainCtrl">
 
-	<nav class="uk-navbar">
-		<ul class="uk-navbar-nav">
-			<li ng-repeat="tab in tabs" ng-click="onClickTab(tab)">
-				<a>{{ tab.title }}</a>
-			</li>
-		</ul>
-	</nav>
+	<ul class="tabs" data-tabs id="app-tabs">
+		<li class="tabs-title menu-tab" ng-repeat="tab in tabs" ng-click="onClickTab(tab)">
+			<a>{{ tab.title }}</a>
+		</li>
+	</ul>
 
 
 	<div ng-include="currentTab">
