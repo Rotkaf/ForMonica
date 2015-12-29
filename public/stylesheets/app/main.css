@@ -1,0 +1,10 @@
+.menu-button {
+  margin-bottom: 20em; }
+
+.tabs li.menu-tab a {
+  font-size: 1em; }
+
+#add-recipe-form {
+  margin-top: 2em; }
+  #add-recipe-form #add-recipe-prep-desc {
+    height: 150px; }

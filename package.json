@@ -1,0 +1,34 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "przepisy",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.5.4",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.1.1",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rotkaf/ForMonica.git"
+  },
+  "keywords": [
+    "przepisy"
+  ],
+  "author": "rotkaf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rotkaf/ForMonica/issues"
+  },
+  "homepage": "https://github.com/Rotkaf/ForMonica#readme"
+}

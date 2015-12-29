@@ -1,0 +1,60 @@
+<div id="add-recipe-form">
+
+	<form>
+
+		<div class="row">
+			<div class="small-6 large-centered columns">
+				<label>Nazwa dania:
+					<input type="text">
+				</label>
+			</div>
+		</div>
+	
+		<div class="row" style="margin-bottom: 20px">
+			<div class="small-6 large-centered columns">
+				Typ dania:
+				
+				<ui-select ng-model="selectedItem" theme="select2" style="width: 100%;">
+				    <ui-select-match>
+				        <span ng-bind="$select.selected.name"></span>
+				    </ui-select-match>
+				    <ui-select-choices repeat="mealType in (mealTypes | filter: $select.search) track by mealType.id">
+				        <span ng-bind="mealType.name"></span>
+				    </ui-select-choices>
+				</ui-select>
+			</div>
+		</div>		
+		
+		<div class="row">
+			<div class="small-6 large-centered columns">
+				<label>Czas przygotowania:
+					<input type="text">
+				</label>
+			</div>				
+		</div>
+				
+		<div class="row">
+			<div class="small-6 large-centered columns">
+				<label>Lista składników:
+					<textarea id="add-recipe-ingredients-list"></textarea>
+				</label>
+			</div>				
+		</div>
+
+		<div class="row">
+			<div class="small-6 large-centered columns">
+				<label>Opis przygotowania:
+					<textarea id="add-recipe-prep-desc"></textarea>
+				</label>
+			</div>				
+		</div>	
+	
+		<div class="row">
+			<div class="small-6 large-centered columns">
+	  			<input type="submit" class="button expanded" value="Dodaj przepis">
+	  		</div>
+	  	</div>	  		
+	
+	</form>
+	
+</div>
